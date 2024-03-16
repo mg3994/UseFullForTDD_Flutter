@@ -11,6 +11,7 @@
 
 
 # conditinal imports and exports
+also for => !kReleaseMode <br>
 example 
 *  import './config_io.dart' if (dart.library.html) './config_web.dart' as config;
 
