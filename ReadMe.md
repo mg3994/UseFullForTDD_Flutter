@@ -139,3 +139,10 @@ Future<AppConfig> getAppConfig(String packageName) async {
   }
 }
 ```
+
+# Next Usefull Stuffs
+```dart
+extension AppLocalizationsX on BuildContext {
+  AppLocalizations get l10n => AppLocalizations.of(this);
+}
+```
