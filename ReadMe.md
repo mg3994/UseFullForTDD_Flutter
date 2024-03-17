@@ -159,7 +159,7 @@ enum AppFlavor { development, staging, production }
 
 extension AppFlavorExtension on AppFlavor {
   static AppFlavor get current {
-    final String? flavor = Platform.environment['FLUTTER_APP_FLAVOR'];
+    final String? flavor = Platform.environment['FLUTTER_APP_FLAVOR']; // String.fromEnvironment('FLUTTER_APP_FLAVOR', defaultValue: 'development');
     switch (flavor) {
       case 'development':
         return AppFlavor.development;
