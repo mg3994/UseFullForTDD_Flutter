@@ -123,7 +123,7 @@ Future<AppConfig> getAppConfig(String packageName) async {
 
 
 # Todo Stuff 
-* like this
+* like this %OS%
 ```
   /// The directory where umbra stores data.
   Directory get dataDirectory {
