@@ -150,3 +150,30 @@ extension AppLocalizationsX on BuildContext {
 ```dart
   final theme = Theme.of(context);
 ```
+
+
+# Experimental Stuff Don't Touch
+
+```dart
+enum AppFlavor { development, staging, production }
+
+extension AppFlavorExtension on AppFlavor {
+  static AppFlavor get current {
+    final String? flavor = Platform.environment['FLUTTER_APP_FLAVOR'];
+    switch (flavor) {
+      case 'development':
+        return AppFlavor.development;
+      case 'staging':
+        return AppFlavor.staging;
+      case 'production':
+        return AppFlavor.production;
+      default:
+        throw Exception('Unsupported flavor: $flavor');
+    }
+  }
+}
+
+extension AppLocalizationsX on BuildContext {
+  AppFlavor get flavor => AppFlavorExtension.current;
+}
+```
