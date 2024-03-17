@@ -119,3 +119,23 @@ Future<AppConfig> getAppConfig(String packageName) async {
   return config;
 }
 ```
+
+
+
+# Todo Stuff 
+* like this
+```
+  /// The directory where umbra stores data.
+  Directory get dataDirectory {
+    final String home;
+    if (platform.isMacOS || platform.isLinux) {
+      home = platform.environment['HOME']!;
+    } else if (platform.isWindows) {
+      home = platform.environment['UserProfile']!;
+    } else {
+      throw UnsupportedError('Unsupported platform.');
+    }
+    return Directory(path.join(home, '.umbra'));
+  }
+}
+```
