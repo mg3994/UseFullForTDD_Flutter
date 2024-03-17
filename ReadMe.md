@@ -146,3 +146,7 @@ extension AppLocalizationsX on BuildContext {
   AppLocalizations get l10n => AppLocalizations.of(this);
 }
 ```
+### Custom Extensions for
+```dart
+  final theme = Theme.of(context);
+```
